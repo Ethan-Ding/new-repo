@@ -1,0 +1,73 @@
+/* sticky bar for phones ui */
+.mobile-bar,
+.mobile-room-tab,
+.mobile-room-tab-overlay,
+.mobile-bar-spacer { display: none; }
+
+.mobile-bar {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    display: block;
+    position: sticky;
+    bottom: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #FFFFFF;
+    border-radius: 12px;
+    padding: .75rem 1rem;
+    text-align: center;
+    margin: 12px 8px 8px 8px;
+}
+.mobile-bar-button {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: .5rem;
+}
+.btn { min-height: 48px; }
+
+.mobile-room-tab-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+    z-index: 59;
+}
+/* room tab  */
+.mobile-room-tab {
+    display: block;
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: 85%;
+    max-width: 360px;
+    background: #fff;
+    border-left: 1px solid #e2e8f0;
+    transform: translateX(100%);
+    transition: transform .25s ease;
+    z-index: 60;
+    padding: 12px;
+    overflow-y: auto;
+    box-shadow: -8px 0 24px rgba(0,0,0,.08);
+}
+/* open tab */
+.mobile-room-tab.open { transform: translateX(0); }
+/* tab name and close button */
+.mobile-room-tab-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+/* add room button column */
+.mobile-room-tab-button {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: .75rem;
+}
+
+.rooms-list { overflow-y: auto; }
+
+

@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2022"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@payload-config": [
+        "./src/payload.config.ts"
+      ]
+    },
+    "target": "ES2022",
+    "types": ["node", "@playwright/test", "vitest", "vitest/globals", "@testing-library/jest-dom"]
+
+  },
+  "include": [
+    "next-env.d.ts",
+    "vitest.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "tests/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+     ".next",
+    "src/app/(payload)/api/graphql/route.ts"
+  ],
+}
